@@ -11,6 +11,8 @@ linkGitHubEl.title = 'GitHub';
 linkInstagramEl.title = 'Instagram';
 linkGmailEl.title = 'Gmail';
 
+// função que abre a página, ocultando o spinner carregando,
+// após três segundos
 function abrirPagina() {
     carregandoEl.classList.add('ocultar');
     headerEl.classList.remove('ocultar');
@@ -42,6 +44,7 @@ linkInstagramEl.addEventListener('click', () => {
     linkEmNovaAba.focus();
 });
 
+// função que marca o link selecionado no header
 function marcaLink (linkEl) {
     for (let linkEl of linksDoHeaderEl) {
         linkEl.classList.remove('link-selecionado');
@@ -49,6 +52,10 @@ function marcaLink (linkEl) {
     linkEl.classList.add('link-selecionado');
 }
 
+// função que abre uma section da página
+/**
+ *  @param linkEl o link que foi clicado no header
+ */ 
 function abrirSection(linkEl) {
     for (let sectionEl of arrSectionEl) {
         sectionEl.classList.add('ocultar');
