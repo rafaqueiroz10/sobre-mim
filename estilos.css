@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+body {
+    background-color: #919191;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+header {
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    color: white;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes girar {
+    from, to {
+        border-top: 5px solid black;
+    }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    width: 6em;
+    height: 6em;
+    border-radius: 50% 50%;
+    border: 0.3em solid rgb(213, 214, 222);
+}
+
+.girar {
+    animation: girar 0.6s ease-in 0s 5 reverse;
+}
+
+.carregando {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45em;
+}
+
+.contatos {
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 12em;
+    width: 20em;
+    gap: 1em;
+    border-radius: 0.6em;
+    position: fixed;
+    left: 50%;
+    top: 50%;  
+    transform: translate(-50%, -50%);
+    border-radius: 1vh;
+}
+
+.contatos h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 27px;
+}
+
+#perfis button img {
+    width: 4em;
+    height: 4em;
+}
+
+#perfis button {
+    border-radius: 50% 50%;
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+}
+
+#perfis {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3em;
+}
+
+.link-selecionado {
+    background-color: #545454;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 5px;
+}
+
+@keyframes revelar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animacao-revelar {
+    animation: revelar 2s 1;
+}
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#texto-tp1 h2 a, #texto-jogo h2 a, #texto-python h2 a {
+    text-decoration: none;
+    color: rgba(70, 70, 196, 0.84);
+}
+
+#tecnologias-tp1, #tecnologias-jogo, #img-python {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#texto-tp1, #texto-jogo, #texto-python {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#texto-tp1 p, #texto-jogo p, #texto-python p {
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    bottom: 1.4em;
+}
+
+#tp1, #jogo-da-velha {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 45em;
+    height: 12.5em;
+    border-radius: 5px;
+    padding-left: 0.7em;
+    padding-right: 0.5em;
+}
+
+#python {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 45em;
+    height: 13.5em;
+    border-radius: 5px;
+    padding-left: 0.7em;
+    padding-right: 0.5em;
+}
+
+#tecnologias-jogo img, #tecnologias-tp1 img {
+    width: 5.5em;
+    height: 4em;
+    position: relative;
+    bottom: 1em;
+}  
+
+#img-python {
+    height: 2em;
+}
+
+#img-python img {
+    width: 5.5em;
+    height: 4em;
+    position: relative;
+    bottom: 2em;
+}
+
+.sobre-mim {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    height: 40em;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.por-que, .expectativas {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: 40em;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#imagem-rafael img {
+    width: 15em;
+    height: 15em;
+    border-radius: 50% 50%;
+}
+
+#texto-sobre-mim {
+    color: #ffffff;
+    width: 20em;
+    font-size: 20px;
+    height: 26em;
+}
+
+.por-que p, .expectativas p {
+    color: #ffffff;
+    width: 20em;
+}
+
+.expectativas p, .por-que p {
+    font-size: 25px;
+}
+
+.por-que p a {
+    color: black;
+    text-decoration: none;
+}
+
+.por-que p a:hover {
+    text-decoration: underline;
+}
+
+.por-que p a:active {
+    color: white;
+}
+
+.projetos h2:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(70, 70, 196, 0.84);
+}
+
+header li:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+header li:active {
+    color: #d9d9d9;
+}
+
+@media (width <= 750px) {
+    .projetos #tp1, .projetos #jogo-da-velha, .projetos #python {
+        width: 80%;
+    }
+}
+
+@media (width < 613px) {
+    .projetos #tp1, .projetos #jogo-da-velha, .projetos #python {
+        height: 35%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    }
+}
+
+@media (width < 501px) {
+    .sobre-mim {
+        gap: 2%;
+    }
+    #imagem-rafael img {
+        height: 10em;
+        width: 10em;
+    }
+    .por-que, .expectativas {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+.ocultar {
+    display: none;
+}
